@@ -11,11 +11,6 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 public class BotConfig {
 
     @Bean
-    public BotService myBotService(ExpenseRepository expenseRepository) {
-        return new BotService(expenseRepository);
-    }
-
-    @Bean
     public MyTelegramBot myTelegramBot(BotService botService) {
         MyTelegramBot bot = new MyTelegramBot(botService);
 

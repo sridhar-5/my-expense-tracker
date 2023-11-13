@@ -1,4 +1,0 @@
-telegram:
-  bot:
-    token: ${TELEGRAM_ACCESS_TOKEN}
-    username: ${TELEGRAM_BOT_USERNAME}

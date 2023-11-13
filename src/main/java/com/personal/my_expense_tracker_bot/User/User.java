@@ -16,10 +16,7 @@ public class User {
     private Long id;
 
     @Getter @Setter
-    private String firstName;
-
-    @Getter @Setter
-    private String lastName;
+    private Long telegramId;
 
     @Getter @Setter
     private String userName;
@@ -29,4 +26,9 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Expense> expenses;
+
+    public User(Long telegramId, String userName){
+        this.telegramId = telegramId;
+        this.userName = userName;
+    }
 }

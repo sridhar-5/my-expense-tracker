@@ -31,10 +31,14 @@ public class Expense {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Expense(String expenseName, double expenseAmount, LocalDateTime expenseCreatedAt){
+    @Getter @Setter
+    private String category;
+
+    public Expense(String expenseName, double expenseAmount, LocalDateTime expenseCreatedAt, String category){
         this.expenseName = expenseName;
         this.expenseAmount = expenseAmount;
         this.expenseCreatedAt = expenseCreatedAt;
+        this.category = category;
     }
 
     public Expense() {};
