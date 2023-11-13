@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ExpenseRepository extends CrudRepository<Expense, Long> {
-    List<Expense> findAllByMonthAndYear(int month, int year);
+    List<Expense> findAllByMonthAndYear(int month, int year); // TODO: THIS LOGIC IS NOT CORRECT REPLACE IT WITH SOMETHING ELSE
 }
